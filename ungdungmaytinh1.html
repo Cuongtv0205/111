@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng bảng trong máy tính</title>
+  <style>
+
+    button {
+      width: 100%;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+<table>
+<tr>
+  <td colspan="4">
+    <input type="text" id="sc"> <!--giá trị đầu vào-->
+  </td>
+</tr>
+  <tr>
+    <td>
+    <button onclick="inp( '(' )"> ( </button>
+    </td>
+    <td>
+      <button onclick="inp(')')"> ) </button>
+    </td>
+    <td>
+      <button onclick="inp('%')"> % </button>
+    </td>
+    <td>
+      <button onclick="document.getElementById('sc').value=''"> AC </button> <!-- AC ấn reset nên cho giá trị rỗng-->
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button onclick="inp(7)"> 7 </button>
+    </td>
+    <td>
+      <button onclick="inp(8)"> 8 </button>
+    </td>
+    <td>
+      <button onclick="inp(9)"> 9 </button>
+    </td>
+    <td>
+      <button onclick="inp('/')"> / </button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button onclick="inp(4)"> 4 </button>
+    </td>
+    <td>
+      <button onclick="inp(5)"> 5 </button>
+    </td>
+    <td>
+      <button onclick="inp(6)"> 6 </button>
+    </td>
+    <td>
+      <button onclick="inp('*')"> * </button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button onclick="inp(1)"> 1 </button>
+    </td>
+    <td>
+      <button onclick="inp(2)"> 2 </button>
+    </td>
+    <td>
+      <button onclick="inp(3)"> 3 </button>
+    </td>
+    <td>
+      <button onclick="inp('-')"> - </button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button onclick="inp(0)"> 0 </button>
+    </td>
+    <td>
+      <button onclick="inp('.')"> . </button>
+    </td>
+    <td>
+      <button onclick="document.getElementById('sc').value= eval(document.getElementById('sc').value)"> = </button>
+    </td>
+    <td>
+      <button onclick="inp('+')"> + </button>
+    </td>
+  </tr>
+</table>
+<script>
+  function inp(b){  // đặt hàm bất kỳ
+    document.getElementById('sc').value+=b; // gọi hàm từ giá trị id đầu vào
+  }
+</script>
+</body>
+</html>
