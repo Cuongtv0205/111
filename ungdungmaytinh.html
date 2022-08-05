@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Ứng dụng máy tính </title>
+</head>
+<body>
+<h3> Caculator </h3>
+
+    <input type="text" id="ok1">
+    <input type="text" id="ok2">
+
+<br>
+<table>
+<button onclick=Cong()> Cộng </button>
+<button onclick=Tru()> Trừ </button>
+<button onclick=Nhan()> Nhân </button>
+<button onclick=Chia()> Chia </button>
+</table>
+<script>
+function Cong(){
+    let b = (+document.getElementById('ok1').value);
+    let c = (+document.getElementById('ok2').value);
+    alert(b + c);
+}
+function Tru(){
+    let b = (+document.getElementById('ok1').value);
+    let c = (+document.getElementById('ok2').value);
+    alert(b - c);
+}
+function Nhan(){
+    //+documnet:được hiểu là không phải chuỗi.
+    // để thực hiện phép tính.
+    let b = (+document.getElementById('ok1').value);
+    let c = (+document.getElementById('ok2').value);
+    alert(b * c);
+}
+function Chia(){
+    let b = (+document.getElementById('ok1').value);
+    let c = (+document.getElementById('ok2').value);
+    alert(b / c);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<input type="text" id="ok">
+<select name=""id='demo1'>
+    <option value="a">VND</option>
+    <option value="b">USD</option>
+</select>
+<select name=""id='demo2'>
+    <option value="a">VND</option>
+    <option value="b">USD</option>
+</select>
+<button onclick= giatri()> Convert </button>
+<script>
+    function giatri(){
+        let dauvao = document.getElementById('ok').value;
+        let demo1 = document.getElementById('demo1').value;
+        let demo2 = document.getElementById('demo2').value;
+        if (demo1==demo2 ){
+            alert(dauvao);
+        }
+        if(demo1=="a" && demo2=="b" ){
+            alert(dauvao/23000);
+        }
+        if( demo1=="b" && demo2=="a"){
+            alert(dauvao*23000);
+        }
+    }
+</script>
+</body>
+</html>
