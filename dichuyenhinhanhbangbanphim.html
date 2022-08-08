@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chyển chuột bằng bàn phím</title>
+</head>
+<body>
+<img id="Nobita" src="https://media.vov.vn/uploaded/fuxpgqubk/2018_05_13/gd18_styleguide2_kanpan_v2_nobi_copy_tbyb.jpg"
+     style="width: 100px; position: absolute; top: 0; left: 0;">
+<script>
+    function up() {
+        let element = document.getElementById('Nobita');
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+
+    function down() {
+        let element = document.getElementById('Nobita');
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+
+    function left() {
+        let element = document.getElementById('Nobita');
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+    }
+
+    function right() {
+        let element = document.getElementById('Nobita');
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+
+    function moveSelecttion(abc) {
+        console.log(abc)
+        switch (abc.keyCode) {
+            case 40:
+                up();
+                break;
+            case 38:
+                down();
+                break;
+            case 39:
+                left();
+                break;
+            case 37:
+                right();
+                break;
+        }
+    }
+    window.addEventListener('keydown', moveSelecttion);
+</script>
+</body>
+</html>
