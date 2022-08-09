@@ -5,6 +5,71 @@
     <title>Tính số ngày trong tháng</title>
 </head>
 <body>
-
+<form>
+    <h3> Số ngày trong tháng </h3>
+    <input type="number" id="month"style="width: 100px" placeholder="Nhập tháng vào đi">
+    <button type="button" onclick="TSN()">Tính số ngày</button>
+    <p id="KQ"> Kết quả hiển thị ở đây </p>
+</form>
+<script>
+    //Cấu trúc CASE//
+    let T1 = "1";
+    let T2 = "2";
+    let T3 = "3";
+    let T4 = "4";
+    let T5 = "5";
+    let T6 = "6";
+    let T7 = "7";
+    let T8 = "8";
+    let T9 = "9";
+    let T10 = "10";
+    let T11 = "11";
+    let T12 = "12";
+    function TSN() {
+        let T = document.getElementById("month").value;
+        switch (T) {
+            case T1:
+            case T3:
+            case T5:
+            case T7:
+            case T8:
+            case T10:
+            case T12:
+                document.getElementById("KQ").innerHTML = "Tháng " + T + " có 31 ngày";
+                break;
+            case T4:
+            case T6:
+            case T9:
+            case T11:
+                document.getElementById("KQ").innerHTML = "Tháng " + T + " có 30 ngày";
+                break;
+            case T2:
+                document.getElementById("KQ").innerHTML = "Tháng " + T + " có 28 hoặc 29 ngày";
+                break;
+            default:
+                document.getElementById("KQ").innerHTML = "Nhập lại tháng";
+        }
+    }
+    //Sử dụng cấu trúc điều kiện else if//
+    // function TSN() {
+    //     let T = document.getElementById("month").value; //'12'
+    //     if (T == T1
+    //         || T == T3
+    //         || T == T5
+    //         || T == T7
+    //         || T == T8
+    //         || T == T10
+    //         || T == T12) {
+    //         document.getElementById("KQ").innerHTML = "Tháng " + T + " có 31 ngày";
+    //     } else if (T == T4 || T == T6 || T == 9 || T == T11) {
+    //         document.getElementById("KQ").innerHTML = "Tháng " + T + " có 30 ngày";
+    //
+    //     } else if (T == 2) {
+    //         document.getElementById("KQ").innerHTML = "Tháng " + T + " có 28 hoặc 29 ngày";
+    //     } else {
+    //         document.getElementById("KQ").innerHTML = " Mời bạn nhập ";
+    //     }
+    // }
+</script>
 </body>
 </html>
